@@ -1,0 +1,8 @@
+ascr-sustainability-fy23.pdf
+*.aux
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pyg
