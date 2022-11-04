@@ -27,7 +27,14 @@
 \usepackage{abstract}
 \usepackage{subfigure}
 \usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks,
+  citecolor=violet,
+  linkcolor=blue,
+  urlcolor=blue
+}
 \usepackage{wrapfig}
 \usepackage{url}
 \usepackage{pdfpages}
@@ -171,7 +178,7 @@ possible. We will achieve this growth by pushing for two key goals:
 \item {\bf Core sustainment.} {\it We will create a project structure to sustain key
   software packages}. Contributions to the stack so far have been driven by ECP
   investment, and DOE must continue to invest in key projects to ensure that their
-  capabilities are preserved. The successors of today's exasacle machines will
+  capabilities are preserved. The successors of today's exascale machines will
   incorporate new types of accelerators, and we must build on the ECP stack to harness
   their power.
 \item {\bf Base building.} Spack, MFEM, Kokkos, and other ECP projects have grown
@@ -193,7 +200,7 @@ projects and actively shape the future of cloud and industry HPC.
 
 \section{Software Foundations}
 
-Software foundations like the Apache Software Foundation (ASD) and the Linux Foundation
+Software foundations like the Apache Software Foundation (ASF) and the Linux Foundation
 (LF) have successfully scaled and sustained some of the largest open source communities.
 Within LF, the Cloud Native Computing Foundation (CNCF) organizes a consortium of
 independent projects around containers and Kubernetes. Importantly, a key goal of CNCF
@@ -207,7 +214,7 @@ Foundation (HPCF) that can:
 \begin{enumerate}
 \item Serve as a neutral home for key projects in the HPC open source ecosystem;
 \item Provide a transparent governance model that allows DOE, facilities, industry, and
-  academia to site at the same table and steer the direction of member projects;
+  academia to sit at the same table and steer the direction of member projects;
 \item Easily accept donations and funds from foundation members to help sustain projects;
 \item Understand HPC trends, host events, and encourage project outreach, inclusion, and
   growth; and
@@ -225,8 +232,8 @@ major cloud vendors) to collaborate and build common infrastructure. It can also
 down barriers between DOE and industry, or between DOE and the broader but smaller-scale
 academic HPC community.
 
-We will thus adopt a model similar to that of
-Kubernetes\footnote{\href{https://github.com/kubernetes/steering/blob/main/charter.md}{https://github.com/kubernetes/steering/blob/main/charter.md}},
+We will thus adopt a model similar to
+\href{https://github.com/kubernetes/steering/blob/main/charter.md}{that of Kubernetes},
 where a top-level steering committee guides the project's strategic direction, bylaws,
 and finances, but delegates all technical responsibilities to sub-groups. Initially, the
 steering committee comprise senior staff from ECP projects, facilities, laboratories,
@@ -237,7 +244,7 @@ NNSA, ASCR, and industry partners.
 To present a familiar technical governance model, the steering committee will be
 responsible for the ramp-up and ramp-down of Special Interest Groups (SIGs). SIGs are
 groups of collaborators working together on particular key technical topics, which could
-range from core feature developemnt to a larger group of related projects focusing on
+range from core feature development to a larger group of related projects focusing on
 key refactoring and integration efforts. SIGs can be funded or unfunded, but key
 projects designated for core sustainment will be funded based on decisions by the
 steering committee.
@@ -252,7 +259,10 @@ of key metrics:
   products;
 \item Market trends and potential to establish industry, facility, or academic
   partnerships;
-\item Potential to enhance DEI in the larger HPCF community; and
+\item Potential to enhance Diversity, Equity, and Inclusion (DEI) in the larger HPCF
+  community\footnote{LF has existing initiatives we can build on:
+  \href{https://www.linuxfoundation.org/about/diversity-inclusivity}{https://www.linuxfoundation.org/about/diversity-inclusivity}};
+  and
 \item Key infrastructure for the sustainment and integration of the HPCF stack.
 \end{enumerate}
 
@@ -260,7 +270,7 @@ The steering committee will evaluate projects on these metrics on a yearly basis
 funded projects will be required to establish yearly milestones. Milestone descriptions
 should be short (no more than a page or a single slide) but should demonstrate progress
 towards one or more of the objectives above. Milestones will be presented to the
-steering committee or by a deisgnated subcommittee each year. Inclusion is determined by
+steering committee or by a designated subcommittee each year. Inclusion is determined by
 the above metrics, but funding for approved projects will be determined based on
 technical need.
 
@@ -271,12 +281,12 @@ parties can participate, and to include new potential partners and customers in 
 project planning. We believe that enthusiastic users eventually become contributors, and
 funded projects will be given assistance by the HPCF with project tooling such as
 automation, hosting, establishing CI, interfacing with HPC facilities, and cultivating
-industry partnerships. This wil lower barriers for project developers and will encourage
-further growth. We will establish a model similar to CNCF's ``sandbox'', ``incubating''
-and ``graduated''
-projects\footnote{\href{https://www.cncf.io/projects/}{https://www.cncf.io/projects/}}
-to grow project maturity and move projects to production-readiness, and we will
-aggressively promote production-ready projects to the broader HPC community.
+industry partnerships. This will lower barriers for project developers and will
+encourage further growth. We will establish a model similar to
+\href{https://www.cncf.io/projects/}{CNCF's ``sandbox'', ``incubating'' and
+  ``graduated'' projects} to grow project maturity and move projects to
+production-readiness, and we will aggressively promote production-ready projects to the
+broader HPC community.
 
 The SIG structure provides a lightweight governance model for smaller projects, but it
 allows larger projects to grow their own governance model in the hope that they could
@@ -296,7 +306,7 @@ document our governance model and establish a procedure for establishing SIGs. S
 grown during ECP to comprise a community of over 1,100 contributors from nearly 300
 organizations, and it has attracted the interest of Amazon Web Services (AWS) and Google
 Cloud Platform (GCP) as their HPC deployment tool of choice. AWS is already contributing
-\$250k/year in cloud credits, and There is interest within AWS, GCP, HPE, AMD, Kitware,
+\$250k/year in cloud credits, and there is interest within AWS, GCP, HPE, AMD, Kitware,
 and others in a foundation to ensure Spack's longevity beyond ECP. ParaTools and Kitware
 have proposed a CI-related SBIR project with which we can also partner. We will:
 
@@ -319,8 +329,8 @@ positioned to pave the way for other ECP projects.
 
 \section{Initial Special Interest Groups (SIGs)}
 
-As mentioned above, SIGs are simply technical focus areas wtih publicly documented
-activities and governance. Under our sutsainment plans, SIGs can also be funded if
+As mentioned above, SIGs are simply technical focus areas with publicly documented
+activities and governance. Under our sustainment plans, SIGs can also be funded if
 necessary, based on decisions by our steering committee. We will work with steering
 committees to establish an initial set of SIGs representing critical components of the
 ECP stack. We aim to cover as much of the ECP stack as possible.
@@ -328,9 +338,8 @@ ECP stack. We aim to cover as much of the ECP stack as possible.
 The initial SIGs we have in mind are E4S and Stack Integration, Workflow, CEED/MFEM,
 AMReX/WarpX, Programming Models and Compilers, Visualization, Performance Tools, System
 Software and IO, Spack core features, and Machine Learning (ML). We have already
-established an ML SIG within the Spack project, with membership from UIUC and from
-national
-laboratories\footnote{\href{https://github.com/spack/spack/wiki/Machine-Learning-SIG}{https://github.com/spack/spack/wiki/Machine-Learning-SIG}},
+established an \href{https://github.com/spack/spack/wiki/Machine-Learning-SIG}{ML SIG
+  within the Spack project}, with membership from UIUC and from national laboratories,
 and other SIGs in this list correspond to SDKs and other groups within ECP. Our goal is
 to coordinate with other funded sustainability projects to cover projects that wish to
 engage with us on our foundation model. If certain projects are funded through another
@@ -343,7 +352,7 @@ After FY23, if this model is successful, we aim to work with LF to establish an 
 project for HPC, and to begin to convert SIGs into their own sub-projects. With
 sufficient momentum, software can be the the conduit by which DOE can shape the
 direction of the industry HPC stack. DOE OSS has value that no company wishes to
-reinvent; lasting value in open souce repositories and technical expertise allow us to
+reinvent; lasting value in open source repositories and technical expertise allow us to
 lead by example. A well established, robust software ecosystem will ensure both that we
 can take advantage of post-exascale hardware, but also that we have a robust and
 portable stack for HPC in the cloud.

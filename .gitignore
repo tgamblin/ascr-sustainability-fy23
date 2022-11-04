@@ -6,3 +6,5 @@ ascr-sustainability-fy23.pdf
 *.log
 *.out
 *.pyg
+*.bak
+#.*
