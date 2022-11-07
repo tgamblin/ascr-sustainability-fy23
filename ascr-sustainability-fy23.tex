@@ -86,8 +86,8 @@
 \titleformat{\paragraph}[runin]{\normalsize\secformat\color{subsecblue}}{\theparagraph}{1em}{}
 
 \newcommand{\tablesec}[1]{%
-	\vspace{.1em}
-	\textbf{\color{subsecblue} #1}\newline}
+        \vspace{.1em}
+        \textbf{\color{subsecblue} #1}\newline}
 % --------------------------------------------------
 % Paragraphs
 % --------------------------------------------------
@@ -120,14 +120,14 @@
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
 \lhead{
-	\begin{tikzpicture}
-		\node[white,draw=white,shape=rectangle,fill=hdrgray] at (-8, 12)
-		{\sf\footnotesize \hbox to \textwidth{
-			Strong Foundations for Sustainability
-			\hfill
-			FY23 ASCR Software Sustainability Proposal}
-		};
-	\end{tikzpicture}
+        \begin{tikzpicture}
+                \node[white,draw=white,shape=rectangle,fill=hdrgray] at (-8, 12)
+                {\sf\footnotesize \hbox to \textwidth{
+                        Strong Foundations for Sustainability
+                        \hfill
+                        FY23 ASCR Software Sustainability Proposal}
+                };
+        \end{tikzpicture}
 }
 \chead{}
 \rhead{}
@@ -182,12 +182,13 @@ possible. We will achieve this growth by pushing for two key goals:
 
 \begin{enumerate}
 \item {\bf Core sustainment.} {\it We will create a project structure to sustain key
-  software packages}. Contributions to the stack so far have been driven by ECP
+  software packages, includign a critical mass of the most impactful software developed in the ECP.}.
+  Contributions to the stack so far have been driven by ECP
   investment, and DOE must continue to invest in key projects to ensure that their
   capabilities are preserved. The successors of today's exascale machines will
   incorporate new types of accelerators, and we must build on the ECP stack to harness
   their power.
-\item {\bf Base building.} Spack, MFEM, Kokkos, and other ECP projects have grown
+\item {\bf Base building.} Spack, Kokkos, MFEM, and other ECP projects have grown
   communities of hundreds of contributors, attracting the interest of industry just as
   HPC has begun to take off in the cloud\footnote{Current studies project an 8\%
   Compound Annual Growth Rate (CAGR) for cloud HPC.}. Now is the time to leverage this
@@ -196,17 +197,18 @@ possible. We will achieve this growth by pushing for two key goals:
     impact}.
 \end{enumerate}
 
-Now is the time for this effort, because we are at an inflection point. While
+Scientific computing is at an inflection point. While
 accelerated AI has become ubiquitous, industry and cloud providers are only just
 beginning to look at accelerated computing for HPC, and they are looking to DOE for
 solutions. Today's exascale technologies are tomorrow's cloud offerings, and a well
-maintained ECP stack can be the foundation of an accelerated cloud HPC ecosystem. We can
+maintained DOE stack can be the foundation of an accelerated cloud HPC ecosystem. We can
 use our position of software leadership to bring industry collaborators into our
 projects and actively shape the future of cloud and industry HPC.
 
 \section{Software Foundations}
 
-Software foundations like the Apache Software Foundation (ASF) and the Linux Foundation
+One successful model of software sustainment outside of the DOE is through
+software foundations like the Apache Software Foundation (ASF) and the Linux Foundation
 (LF) have successfully scaled and sustained some of the largest open source communities.
 Within LF, the Cloud Native Computing Foundation (CNCF) organizes a consortium of
 independent projects around containers and Kubernetes. Importantly, a key goal of CNCF
@@ -242,8 +244,8 @@ We will thus adopt a model similar to
 \href{https://github.com/kubernetes/steering/blob/main/charter.md}{that of Kubernetes},
 where a top-level steering committee guides the project's strategic direction, bylaws,
 and finances, but delegates all technical responsibilities to sub-groups. Initially, the
-steering committee comprise senior staff from ECP projects, facilities, laboratories,
-NNSA, ASCR, and industry partners.
+steering committee will comprise of senior staff from ECP projects, facilities, laboratories,
+ASCR, NNSA, DOE applications, and industry partners.
 
 \section{Impact, Metrics, and Core Sustainment}
 
@@ -265,7 +267,7 @@ of key metrics:
   products;
 \item Market trends and potential to establish industry, facility, or academic
   partnerships;
-\item Potential to enhance Diversity, Equity, and Inclusion (DEI) in the larger HPCF
+\item Potential to enhance Diversity, Equity, and Inclusion (DEI) in the larger HPC
   community\footnote{LF has existing initiatives we can build on:
   \href{https://www.linuxfoundation.org/about/diversity-inclusivity}{https://www.linuxfoundation.org/about/diversity-inclusivity}};
   and
@@ -339,14 +341,17 @@ As mentioned above, SIGs are simply technical focus areas with publicly document
 activities and governance. Under our sustainment plans, SIGs can also be funded if
 necessary, based on decisions by our steering committee. We will work with steering
 committees to establish an initial set of SIGs representing critical components of the
-ECP stack. We aim to cover as much of the ECP stack as possible.
+ECP stack. We aim to cover as much of the ECP stack as possible. Unlike SDKs, the SIGs
+do not need aim to produce a common software product, but rather advance the field,
+similar to the co-design centers in the ECP. We not also that the SIG model is flexible,
+as we can accommodate different funding levels, by varying the number of funded SIGs.
 
 The initial SIGs we have in mind are E4S and Stack Integration, Workflow, CEED/MFEM,
 AMReX/WarpX, Programming Models and Compilers, Visualization, Performance Tools, System
 Software and IO, Spack core features, and Machine Learning (ML). We have already
 established an \href{https://github.com/spack/spack/wiki/Machine-Learning-SIG}{ML SIG
   within the Spack project}, with membership from UIUC and from national laboratories,
-and other SIGs in this list correspond to SDKs and other groups within ECP. Our goal is
+and other SIGs in this list correspond to SDKs and co-design centers within ECP. Our goal is
 to coordinate with other funded sustainability projects to cover projects that wish to
 engage with us on our foundation model. If certain projects are funded through another
 sustainability project, they can still join and contribute to a SIG here, but we should
@@ -356,7 +361,7 @@ be able to fund the entire ECP stack if possible and necessary.
 
 After FY23, if this model is successful, we aim to work with LF to establish an umbrella
 project for HPC, and to begin to convert SIGs into their own sub-projects. With
-sufficient momentum, software can be the the conduit by which DOE can shape the
+sufficient momentum, software can be the conduit by which DOE can shape the
 direction of the industry HPC stack. DOE OSS has value that no company wishes to
 reinvent; lasting value in open source repositories and technical expertise allow us to
 lead by example. A well established, robust software ecosystem will ensure both that we
