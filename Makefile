@@ -5,3 +5,4 @@ all: clean
 
 clean:
 	latexmk -C
+	rm -f *.bak
