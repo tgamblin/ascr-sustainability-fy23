@@ -21,9 +21,9 @@
 % --------------------------------------------------
 % Draft watermark
 % --------------------------------------------------
-\usepackage[colorspec=.9]{draftwatermark}
-\SetWatermarkText{DRAFT}
-\SetWatermarkScale{1}
+%\usepackage[colorspec=.9]{draftwatermark}
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{1}
 
 % --------------------------------------------------
 % Extra packages
@@ -147,6 +147,7 @@ Strong Foundations for Sustainability}
 %\author{\vspace{-1em}
 %  Todd Gamblin, \href{mailto:tgamblin@llnl.gov}{tgamblin@llnl.gov}
 %  Tzanio Kolev, \href{mailto:tzanio@llnl.gov}{tzanio@llnl.gov}
+%  Ann Almgren, \href{mailto:asalmgren@lbl.gov}{asalmgren@lbl.gov}
 %}
 \date{\vspace{-4em}\today\vspace{-3em}}
 
@@ -165,37 +166,44 @@ Strong Foundations for Sustainability}
 
 \section{Vision}
 
-The Exascale Computing Project (ECP) has created a broad ecosystem of software that
+%The Exascale Computing Project (ECP)
+ASCR has created a broad ecosystem of software that
 enables scientists across government, academia and industry to realize the full
-potential of exascale machines. Like its biological namesake, this ecosystem is thriving
-and interconnected,
+potential of exascale machines in advancing the DOE mission.
+%Like its biological namesake,
+This ecosystem is thriving and interconnected,
 %Researchers and developers constantly evolve the ECP
 %software stack to adapt it for new needs and new mission applications. More than ever
 %before (in DOE), the push to exascale has enabled {\it integration} across the stack,
 %and {\it robust}, {\it shared} capabilities are leveraged by many consumer packages. The
 %ECP stack provides many unique capabilities, but these capabilities cannot be sustained
 %unless the software is maintained.
-but it is only valuable if users have confidence in its reliability and longevity. This
-requires ongoing contributions, and a successful sustainment strategy should aim to grow
-the contributor base as large as possible. We will achieve this through three key goals:
+%but it is only
+but it only continues to be
+valuable if users have confidence in its reliability and longevity.
+%This requires ongoing contributions, and a
+A successful sustainment strategy requires growth: of the stakeholder community,
+of the contributor base, and of the software itself.
+%should aim to grow the contributor base as large as possible.
+We will achieve this through these key thrusts:
 
 \begin{enumerate}
-\item {\bf Core sustainment.} We will create a project structure to sustain key
-  software packages, including a critical mass of the most impactful software developed in the ECP;
+
+\item {\bf Core sustainment and integration.} We will create a project structure to sustain key
+    software packages, including a critical mass of the most impactful software developed
+    by ASCR-funded researchers.  We will ensure sustained integration of the components of the
+    software stack through ongoing efforts in Spack.
+
 \item {\bf Base building.} We will aggressively lower barriers for adoption, attracting new
     users and contributors to maximize the value of DOE's investment and broaden our
-    impact; and
-  \item {\bf Integration.} The components of the software stack must work together, and
-    we will ensure this through ongoing integration efforts in Spack.
+    impact.  We will support multiple models for interactions with industry,
+    enabling non-DOE funding to support software as appropriate.
+
+\item {\bf Workforce development.} We will proactively seek to broaden and diversify the
+    ASCR software community in multiple ways: through increasing the participation in
+    existing outreach activities (see, e.g. footnote 1) and through directly offering
+    mentoring and internships with participating software teams.
 \end{enumerate}
-
-Scientific computing is at an inflection point. Accelerated AI is ubiquitous, and
-industry and cloud providers are beginning to look at accelerated computing for
-HPC\footnote{The projected Compound Annual Growth Rate (CAGR) for cloud HPC is 8\%.}.
-Today's exascale technologies are tomorrow's cloud offerings. A well maintained DOE
-stack can be the foundation of an accelerated cloud HPC ecosystem, and we can use our
-position of software leadership to shape the future of cloud and industry HPC.
-
 
 %Spack, Kokkos, MFEM, and other ECP projects have grown
 %  communities of hundreds of contributors, attracting the interest of industry just as
@@ -218,14 +226,15 @@ vendors.
 There is currently no analog of CNCF for HPC, and we aim to fill this gap. The ultimate
 aim of this project is to create an HPC Foundation (HPCF) that can:
 \begin{enumerate}
-\item Serve as a neutral home for key projects in the HPC open source ecosystem;
+\item Serve as a neutral home for key projects in the HPC open source ecosystem, and
+      provide a home for project infrastructure, e.g. Continuous Integration (CI).
 \item Provide a transparent governance model that allows DOE, facilities, industry, and
-  academia to sit at the same table and steer the direction of member projects;
-\item Easily accept donations and funds from foundation members to help sustain projects;
+      academia to sit at the same table and steer the direction of member projects, and
+      allows member projects to accept donations and funds from foundation members to
+      help sustain projects;
 \item Understand HPC trends, coordinating with CNCF and others to increase adoption and
-  integration;
-\item Host events, and encourage project outreach, inclusion, and growth; and
-\item Provide a home for project infrastructure, e.g. Continuous Integration (CI).
+      integration;
+\item Help develop the workforce of tomorrow by engaging ...
 \end{enumerate}
 
 \section{Governance}
@@ -246,7 +255,7 @@ laboratories, ASCR, NNSA, DOE applications, and industry partners. This model is
 familiar to industry, and it lowers barriers for external funding. Many companies are
 already set up to sponsor similarly structured organizations.
 
-\section{Impact, Metrics, and Core Sustainment}
+% \section{Impact, Metrics, and Core Sustainment}
 
 To present a familiar technical governance model, the steering committee will be
 responsible for the ramp-up and ramp-down of Special Interest Groups (SIGs). SIGs are
@@ -311,7 +320,7 @@ model for technical decisions.
 \section{Pilot Foundation Projects in FY23}
 
 We cannot grow an overarching HPC foundation overnight, but we can prototype this
-governance structure in FY23 by standing up SIGs for Spack, Kokkos, MFEM, and other
+governance structure in FY23 by standing up SIGs for Spack, Kokkos, MFEM, AMReX and other
 projects with significant contributor bases. We are already in conversations with the
 Linux Foundation. We will need to document project governance models and establish
 procedures for establishing SIGs. We have interest from Amazon Web Services (AWS),
@@ -367,6 +376,13 @@ feedback. We will organize the steering committee and initial SIGs, then provide
 options to ASCR depending on the funding level. After FY23, we will work with LF to
 establish the umbrella HPCF project.
 
+Scientific computing is at an inflection point. Accelerated AI is ubiquitous, and
+industry and cloud providers are beginning to look at accelerated computing for
+HPC\footnote{The projected Compound Annual Growth Rate (CAGR) for cloud HPC is 8\%.}.
+Today's exascale technologies are tomorrow's cloud offerings. A well maintained DOE
+stack can be the foundation of an accelerated cloud HPC ecosystem.
+%and we can use our position of software leadership to shape the future of cloud and industry HPC.
+
 With sufficient momentum, DOE software can shape the direction of industry HPC.
 DOE open source has value that no company wishes to reinvent. A well established
 software ecosystem ensures that we can take advantage of post-exascale hardware, and
@@ -387,7 +403,7 @@ that we can blaze a path to a portable cloud HPC stack.
 %{
 %  \footnotesize
 %  \setlength{\parskip}{0em}
-%  \bibliography{ascr-sustainbility-fy23}
+%  \bibliography{ascr-sustainability-fy23}
 %}
 %\endgroup
 
