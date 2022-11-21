@@ -149,7 +149,7 @@ Strong Foundations for Sustainability}
 %  Tzanio Kolev, \href{mailto:tzanio@llnl.gov}{tzanio@llnl.gov}
 %  Ann Almgren, \href{mailto:asalmgren@lbl.gov}{asalmgren@lbl.gov}
 %}
-\date{\vspace{-4em}\today\vspace{-3em}}
+\date{\vspace{-4em}\footnotesize\today\vspace{-3em}}
 
 % --------------------------------------------------
 % Custom comamnds
@@ -163,6 +163,47 @@ Strong Foundations for Sustainability}
 \setcounter{page}{1}
 
 \maketitle
+
+{\footnotesize
+{\bf Proposal Team Members:}
+  Todd Gamblin\textsuperscript{1},
+  Tzanio Kolev\textsuperscript{1},
+  Ann Almgren\textsuperscript{2},
+  Mary Ann Leung\textsuperscript{3},
+  %
+  Christian Trott\textsuperscript{4},
+  Pat McCormick\textsuperscript{5},
+  Johannes Doerfert\textsuperscript{1},
+  Tom Scogland\textsuperscript{1},
+  Dan Laney\textsuperscript{1},
+  Shantenu Jha\textsuperscript{6},
+  Kyle Chard\textsuperscript{7},
+  Richard Mills Tran\textsuperscript{7},
+  Barry Smith\textsuperscript{8},
+  Keita Teranishi\textsuperscript{9},
+  William Godoy\textsuperscript{9},
+  Pedro Valero-Lara\textsuperscript{9},
+  Rafael Ferreira da Silva\textsuperscript{9},
+  Berk Geveci\textsuperscript{10},
+  Aashish Chaudhary\textsuperscript{10}
+
+  \textsuperscript{1}LLNL,
+  \textsuperscript{2}LBNL,
+  \textsuperscript{3}Sustainable Horizons Institute,
+  \textsuperscript{4}SNL,
+  \textsuperscript{5}LANL,
+  \textsuperscript{6}BNL,
+  \textsuperscript{7}ANL,
+  \textsuperscript{8}Flatiron Institute,
+  \textsuperscript{9}ORNL,
+  \textsuperscript{10}Kitware, Inc.
+
+% Potential additional industry partners
+%  Andy Warner, (HPE)
+%  Heidi Poxon, (AWS)
+%  Brendan Bouffler, (AWS)
+%  Doug Jacobsen (GCP)
+}
 
 \section{Vision}
 
@@ -191,21 +232,23 @@ We propose to achieve this through these key thrusts:
 
 \item {\bf Core sustainment and integration.} We will create a project structure to sustain key
     software packages, including a critical mass of the most impactful software developed
-    by ASCR-funded researchers.  We will ensure sustained integration of the components of the
-    software stack through ongoing efforts in Spack.
+    by ASCR-funded researchers.  We will ensure sustained integration of software stack components
+    through ongoing efforts in Spack.
 
-\item {\bf Stakeholder growth.} We will aggressively lower barriers for adoption, attracting new
+\item {\bf Stakeholder growth.} We will aggressively lower barriers to adoption, attracting new
     users and contributors to maximize the value of DOE's investment and broaden our
-    impact.  We will support multiple models for interactions with industry,
-    enabling non-DOE funding to support software as appropriate.
+    impact.  We will develop models for industry interactions,
+    enabling non-DOE funding and effort to support software as appropriate.
 
 \item {\bf Workforce development.} We will proactively seek to broaden and diversify the
     ASCR software community in multiple ways: through increasing the participation in
     existing outreach activities\footnote{See, e.g., the existing LF initiatives we can build on:
   \href{https://www.linuxfoundation.org/about/diversity-inclusivity}{https://www.linuxfoundation.org/about/diversity-inclusivity}};
-    and through directly offering
-    mentoring and internships with participating software teams.  We will partner with the
-    Sustainable Horizons Institute, allowing us to maximize the impact of our efforts.
+     and by directly offering training,
+     mentoring and internships with software teams while also fostering scientific
+     science ecosystems that value and seek greater inclusion and diversity.  We will partner with the
+     Sustainable Horizons Institute (SHI)~\footnote{See \href{https://shinstitute.org}{https://shinstitute.org}},
+     allowing us to maximize the impact of our efforts.
 \end{enumerate}
 
 %Spack, Kokkos, MFEM, and other ECP projects have grown
@@ -222,7 +265,7 @@ Foundation (LF), which have successfully scaled and sustained some of the larges
 source communities. Within LF, the Cloud Native Computing Foundation (CNCF) organizes a
 consortium of independent projects around containers and Kubernetes. Importantly, a key
 goal of CNCF is to create a {\it portable} software stack to prevent cloud vendor
-lock-in, much as ECP has created a portable stack that spans GPUs. CNCF's projects are
+lock-in, much as ECP has created a portable stack that spans CPUs and GPUs. CNCF's projects are
 widely supported across clouds and even garner contributions and support from cloud
 vendors.
 
@@ -231,10 +274,10 @@ aim of this project is to create an HPC Foundation (HPCF) that can:
 \begin{enumerate}
 \item Serve as a neutral home for key projects in the HPC open source ecosystem, and
       provide a home for project infrastructure, e.g. Continuous Integration (CI).
-\item Provide a transparent governance model that allows DOE, facilities, industry, and
-      academia to sit at the same table and steer the direction of member projects, and
-      allows member projects to accept donations and funds from foundation members to
-      help sustain projects;
+\item Provide a transparent governance model that allows stakeholders from DOE, facilities,
+      industry, and
+      academia to sit at the same table, steer the direction of member projects;
+\item Enable sustainment of projects with donations from DOE and external sponsors; and
 %\item Understand HPC trends, coordinating with CNCF and others to increase adoption and
 %      integration;
 \item Help develop the workforce of tomorrow by engaging them early in their careers.
@@ -243,7 +286,8 @@ aim of this project is to create an HPC Foundation (HPCF) that can:
 \section{Governance}
 
 Neutral, transparent governance is critical for growing the contributor base for the ECP
-stack, as it allows the broadest possible set of parties to be stakeholders. Currently,
+stack, as it allows the broadest possible set of parties to be stakeholders. Under ECP
+and traditional ASCR projects,
 all governance sits within DOE. While collaboration is encouraged, there are barriers
 for industry collaborators who want to partake in roadmap planning. Shared ownership
 eliminates barriers, allows competitors (like cloud vendors) to collaborate, and
@@ -262,16 +306,19 @@ already set up to sponsor similarly structured organizations.
 
 To present a familiar technical governance model, the steering committee will be
 responsible for the ramp-up and ramp-down of Special Interest Groups (SIGs). SIGs are
-groups of collaborators working together on particular key technical topics, which could
-range from core feature development to a larger group of related projects focusing on
-refactoring or integration efforts. SIGs can be funded or unfunded, but key projects
-designated for core sustainment will be funded based on decisions by the steering
-committee.
+groups of collaborators working together on key technical topics, which could
+range from core feature development, to groups of related projects focusing on
+refactoring or integration efforts, to workforce topics aimed at catalyzing the
+normalization of inclusion and exploiting diversity to produce more innovation. SIGs can
+be funded or unfunded, but key projects designated for core sustainment will be funded
+based on decisions by the steering committee.
 
 The steering committee will determine which projects to sustain by considering a number
-of key metrics on a regular schedule. We propose the following guidelines now, but part
-of our efforts in FY23 will be to work with the steering committee to establish guidelines
-for FY24:
+of key metrics on a regular schedule. We aim to support a broad, forward-looking
+sustainability strategy, extending beyond traditional HPC to include contributors from
+the cloud and computational and data science ecosystems. We propose the
+following guidelines now, but part of our efforts in FY23 will be to work with the
+steering committee to establish guidelines for FY24:
 
 \begin{enumerate}
 \item Broad usage (number of users, contributors, etc.) and potential for community
@@ -280,7 +327,7 @@ for FY24:
   products;
 \item Market trends and potential to establish industry, facility, or academic
   partnerships;
-\item Potential to enhance the diversity of the larger HPC community.
+\item Potential to enhance the diversity of the larger HPC community;
   and
 \item Key infrastructure for the sustainment and integration of the HPCF stack.
 \end{enumerate}
@@ -291,8 +338,8 @@ projects will be required to establish yearly milestones.
 %be short (no more than a page or a single slide) but should demonstrate progress towards
 %the objectives above. Milestones will be presented to the steering committee or by a
 %designated subcommittee each year.
-Inclusion will be determined by the above metrics, but
-funding amounts for approved projects will be determined based on technical need.
+Inclusion will be determined by the above metrics, but funding amounts for approved
+projects will be determined based on technical need.
 
 \section{Growing SIGs into Foundation Projects}
 
@@ -315,7 +362,7 @@ The SIG structure provides a lightweight governance model for smaller projects, 
 allows larger projects to grow their own governance model in the hope that they could
 become foundation projects in their own right. If a SIG begins to grow its own community
 that needs more extensive structure and bylaws, it can become a separate foundation
-projects within the HPCF. The HPCF and its steering committee will work to maintain
+project within the HPCF. The HPCF and its steering committee will work to maintain
 awareness of all member projects, establishing collaborations but not dictating their
 governance models or development workflows. We do not believe there is a single best
 model for technical decisions.
@@ -334,46 +381,34 @@ foundation. In FY23 we will:
 \item Establish an initial steering committee and SIG structure;
 \item Establish an initial set of SIGs to cover a large fraction of the ECP software
   ecosystem; and
-\item Establish Spack (and potentially others) as initial LF projects with dues and
+\item Establish Spack, Kokkos, and potentially other projects as initial LF projects with dues and
   clear membership levels for industry, facility, labs, and other partners;
 \item Begin discussions with LF about an overarching HPC foundation;
 \item Work with ASCR to develop a model for DOE staff to work on funded SIGs within
   foundations;
-\item Begin outreach to attract industry and academic partners to join us. We will explore potential partnership with the HPC4EI program in this area.
+\item Begin outreach to attract industry and academic partners to join us. We will explore
+  potential partnership with the HPC4EI program in this area.
 \end{enumerate}
 
 Spack itself does not encompass the entire ECP software stack, but Spack has high
 adoption and visibility in industry, and all ECP projects are deployed using Spack.
 Given its centrality to the ECP software ecosystem, we aim to coordinate integration
 among projects through Spack, just as E4S has done within ECP.
-%Spack is the glue that
-%holds the ecosystem together, and it allows us to present a unified external interface
-%for deployment at HPC sites or in the cloud.
 
 \section{Initial Special Interest Groups (SIGs)}
 
-As mentioned above, SIGs are technical focus areas with publicly documented activities
-and governance. In our view, SIGs can be funded if necessary, based on decisions by the
-steering committee. We will work with steering committees to establish an initial set of
-SIGs representing critical components of the ECP stack. We aim to cover as much of the
-ECP stack as possible. Unlike SDKs, the SIGs do not need aim to produce a common
-software product, but rather advance the field, similar to the co-design centers in the
-ECP. Our aim is not to force projects to work together, but to find the engagement areas
-that will inspire them to do so. The SIG model can accommodate different funding levels,
-by varying the number of funded SIGs.
-
-In FY23 we will stand up SIGs for Spack, Kokkos, MFEM/CEED, AMReX and other
-projects with significant contributor bases.
-These SIGs will be organized around topic areas such as: Software Stack Integration, Structured and
-Unstructured Discretizations, Sparse Solvers and Time Integrators,
-Programming Models and Compilers, Workflow, Visualization, Performance Tools, System Software and
-IO, and Machine Learning (ML). This list is evolving rapidly, but it corresponds to SDKs
-and co-design centers within ECP, as well as key collaboration directions identified by
-ECP projects. Our goal is to coordinate with other funded sustainability projects to
-cover projects that wish to engage with us on our foundation model. If certain projects
-are funded through another sustainability project, they can still join and contribute to
-a SIG here, but we should be able to fund the entire ECP stack if possible and
-necessary.
+We aim to cover as much of the ECP stack as possible with our SIGs. Our list
+is evolving rapidly, but so far we are aiming for SIGs around Spack and Software
+Integration; Kokkos; Programming Models and Compilers; MFEM/CEED; AMReX and its
+ecosystem; Workflows, Schedulers, and Cloud Integration; Sparse Solvers and Time
+Integrators; System Software and I/O; and Machine Learning.
+%
+This list corresponds to SDKs and co-design centers within ECP, as well as key
+collaboration directions identified by ECP projects. Our goal is to coordinate with
+other funded sustainability projects to cover projects that will engage with us on
+our foundation model. If projects are funded through other sustainability
+projects, they can still join and contribute to a SIG here, but we should be able to fund
+the entire ECP stack if possible and necessary.
 
 \section{FY23 and Beyond}
 
